@@ -32,6 +32,15 @@ docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 
 [appuser@e23fbf89f899 bin]$ cd/bin
 [appuser@e23fbf89f899 bin]$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic petstore
 ```
+- Docker Compose 사용시 기존 소스코드 상의 application.yml 변경 (9092 -> 29092)
+
+```
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:29092
+```
 
 ### 로컬 설치 (비추)
 - Kafka Download
@@ -52,7 +61,6 @@ bin/kafka-server-start.sh config/server.properties &
 cd kafka_2.13-3.1.0/
 bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic petstore
 ```
-
 
 
 # Kubernetes 에 배포
