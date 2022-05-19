@@ -25,12 +25,12 @@ public class Order {
     }
 
 
-    @PreRemove // JPA calls back
-    public void onPreRemove(){
-        OrderCancelled orderCancelled = new OrderCancelled();
-        BeanUtils.copyProperties(this, orderCancelled);
-        orderCancelled.publishAfterCommit();
-    }
+    // @PreRemove // JPA calls back
+    // public void onPreRemove(){
+    //     OrderCancelled orderCancelled = new OrderCancelled();
+    //     BeanUtils.copyProperties(this, orderCancelled);
+    //     orderCancelled.publishAfterCommit();
+    // }
 
 
     public Long getId() {
