@@ -63,6 +63,12 @@ bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic petstore
 ```
 
 
+# 자주 사용하는 명령어
+```
+netstat -lntp | grep :80 #포트확인
+kill -9 `netstat -lntp|grep 808|awk '{ print $7 }'|grep -o '[0-9]*'`   # 80번대 마이크로서비스 모두 삭제
+```
+
 # Kubernetes 에 배포
 
 # Docker 배포 관련
