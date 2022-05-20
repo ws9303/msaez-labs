@@ -6,7 +6,7 @@ https://gitpod.io/#https://github.com/msa-school/msaez-labs
 
 - 접속 후 "Terminal > Terminal열기"
 
-## 유틸리티 설치(httpie)
+## 유틸리티 설치
 
 - httpie (curl / POSTMAN 대용)
 ```
@@ -15,20 +15,20 @@ sudo apt-get install net-tools
 pip install httpie
 ```
 
-- kubernetes utilities
+- kubernetes utilities (kubectl)
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-- aws cli
+- aws cli (aws)
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-- eksctl
+- eksctl 
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
