@@ -9,6 +9,7 @@ import shopping.infra.AbstractEvent;
 public class Shipped extends AbstractEvent {
 
     private Long id;
+    private String productId;
 
     public Shipped() {
         super();

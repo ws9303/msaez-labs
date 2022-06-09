@@ -19,15 +19,20 @@ public class Delivery {
     private Long id;
 
     private String orderId;
-
     private String status;
+    private String address;
+    private String productId;
+
 
     @PostPersist
     public void onPostPersist() {
         Shipped shipped = new Shipped();
         BeanUtils.copyProperties(this, shipped);
         shipped.publishAfterCommit();
+    }
 
+    @PostRemove
+    public void onPostRemove() {
         DeliveryCanceled deliveryCanceled = new DeliveryCanceled();
         BeanUtils.copyProperties(this, deliveryCanceled);
         deliveryCanceled.publishAfterCommit();
@@ -42,10 +47,13 @@ public class Delivery {
 
     public static void ship(OrderPlaced orderPlaced) {
         Delivery delivery = new Delivery();
-        /*
-        LOGIC GOES HERE
-        */
-        // repository().save(delivery);
+
+        delivery.setOrderId(String.valueOf(orderPlaced.getId()));   //anti-corruption layer
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setProductId(orderPlaced.getProductId());
+
+        
+        repository().save(delivery);
 
     }
 

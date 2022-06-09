@@ -18,6 +18,8 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Long stock;
+
     @PostPersist
     public void onPostPersist() {
         InventoryReduced inventoryReduced = new InventoryReduced();
@@ -37,11 +39,12 @@ public class Inventory {
     }
 
     public static void reduceInventory(Shipped shipped) {
-        Inventory inventory = new Inventory();
-        /*
-        LOGIC GOES HERE
-        */
-        // repository().save(inventory);
+        repository().findById(Long.valueOf(shipped.getProductId()))
+            .ifPresent(inventory ->{
+                inventory.setStock(inventory.getStock() - 1);
+                repository().save(inventory);
+            });
+            
 
     }
 
