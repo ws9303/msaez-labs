@@ -1,7 +1,5 @@
 # MSA School Labs
 
-변경3
-
 ## GitPod 접속
 https://gitpod.io/#https://github.com/msa-school/msaez-labs
 
