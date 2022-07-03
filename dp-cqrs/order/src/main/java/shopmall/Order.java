@@ -64,6 +64,10 @@ public class Order {
         System.out.println("test");
         //test//2//3333
     }
+    public void test2(){
+        System.out.println("test");
+        //test//2//3333
+    }
 
 
 }
