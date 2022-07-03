@@ -60,11 +60,5 @@ public class Order {
     }
 
 
-    public void test(){
-        System.out.println("test");
-        //test//2//3333
-    }
-
-
 
 }
