@@ -20,8 +20,6 @@ public class Order {
         OrderPlaced orderPlaced = new OrderPlaced();
         BeanUtils.copyProperties(this, orderPlaced);
         orderPlaced.publishAfterCommit();
-
-
     }
 
     @PreRemove
@@ -50,7 +48,8 @@ public class Order {
     }
 
     public void setQty(Integer qty) {
-        this.qty = qty;
+        if(qty>0)
+            this.qty = qty;
     }
     public String getProductName() {
         return productName;
