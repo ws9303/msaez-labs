@@ -66,7 +66,10 @@ public class Order {
     public void test2(){
         //new method
     }
-    
+      
+    public void test3(){
+        //new method
+    } 
 
 
 }
