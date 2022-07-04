@@ -63,7 +63,7 @@ public class Order {
         //new method
     }
     
-    public void test2(){
+    public void test4(){
         //new method
     }
       
