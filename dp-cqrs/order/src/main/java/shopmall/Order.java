@@ -62,6 +62,11 @@ public class Order {
     public void test(){
         //new method
     }
+    
+    public void test2(){
+        //new method
+    }
+    
 
 
 }
