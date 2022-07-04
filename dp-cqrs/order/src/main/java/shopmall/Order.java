@@ -59,6 +59,9 @@ public class Order {
         this.productName = productName;
     }
 
+    public void test(){
+        //new method
+    }
 
 
 }
