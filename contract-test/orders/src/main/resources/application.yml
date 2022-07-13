@@ -98,7 +98,7 @@ spring:
             configuration:
               default:
                 key:
-                  serde: org.apcdache.kafka.common.serialization.Serdes$StringSerde
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
                 value:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:

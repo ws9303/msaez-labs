@@ -13,7 +13,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: localhost:29092
         streams:
           binder:
             configuration:
@@ -45,7 +45,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: my-kafka.kafka.svc.cluster.local:9092
+          brokers: my-kafka.kafka.svc.cluster.local:29092
         streams:
           binder:
             configuration:
