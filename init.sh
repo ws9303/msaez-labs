@@ -13,3 +13,8 @@ sudo ./aws/install
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 
+#현재 사용자에 대한 kubectl 자동 완성 스크립트 적용
+#echo 'source <(kubectl completion bash)' >>~/.bashrc
+#해당 앨리어스로 작업하도록 셸 자동 완성을 확장
+#echo 'alias k=kubectl' >>~/.bashrc
+#echo 'complete -F __start_kubectl k' >>~/.bashrc
