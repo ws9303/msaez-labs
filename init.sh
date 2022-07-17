@@ -14,7 +14,13 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 
 #현재 사용자에 대한 kubectl 자동 완성 스크립트 적용
-#echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'source <(kubectl completion bash)' >>~/.bashrc
 #해당 앨리어스로 작업하도록 셸 자동 완성을 확장
-#echo 'alias k=kubectl' >>~/.bashrc
-#echo 'complete -F __start_kubectl k' >>~/.bashrc
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashr c
+
+#AWS 자주 사용하는 명령어 alias
+echo 'export region="ap-northeast-2"' >> ~/.bashrc
+echo 'export userid="648798505204"' >> ~/.bashrc
+echo 'export eksname="ws9303-eks"' >> ~/.bashrc
+source ~/.bashrc #bashrc 수정 후 적용
